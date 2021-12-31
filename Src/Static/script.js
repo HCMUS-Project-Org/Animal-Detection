@@ -23,21 +23,15 @@ function setImgFramSize(width, height) {
         document.getElementById(img_frame).style.height = height.toString() + 'px';
         document.getElementById(img_frame).style.width = width.toString() + 'px';
     }
-
 }
 
 eel.expose(getResultBase64Image)
 function getResultBase64Image(b64_img){
     console.log(b64_img)
     return b64_img
-
 }
 
-
-
 function uploadImg(obj) {
-    
-    
     if (FileReader)	{
 		var reader = new FileReader();
 		reader.readAsDataURL(obj.files[0]);
@@ -60,15 +54,9 @@ function uploadImg(obj) {
                 
                 // load detected image 
                 document.getElementById(img_frame).src = './picture/result.jpg'
-                
-                
-
-                
             };
 		}
 	}
-
-    
     // ref: https://stackoverflow.com/questions/3814231/loading-an-image-to-a-img-from-input-file
 }
 

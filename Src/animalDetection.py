@@ -39,9 +39,9 @@ weights_url = 'https://pjreddie.com/media/files/yolov3.weights'
 eel.init('Static')
 
 # -- download weight -- 
-isExist = os.path.isfile(modelWeights)
-if isExist == False:
-    wget 
+# isExist = os.path.isfile(modelWeights)
+# if isExist == False:
+#     wget 
 
 
 # -- read class name --
