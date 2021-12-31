@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+    background: linear-gradient(to right, rgb(137, 185, 206), #D1E2E9);
+    font-family: 'Poppins', sans-serif !important;
+}
+
+footer {
+    background: lightblue;
+}
+
+img {
+    border-radius: 20%;
+    border: 8px solid lightgray;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.btn {
+  height: 70px !important;
+  font-size: 18px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .btn {
+      height: 50px !important;
+  } 
+}
+
+h1 {
+  font-size: 40px !important;
+}
+
+h3 {
+  font-size: 30px !important;
+}
+
+@media only screen and (max-width: 675px) {
+  h1 {
+      font-size: 28px !important;
+  } 
+}
+
+.btn-input-img {
+  opacity: 0;
+  /* border: 1px solid red !important; */
+  width:380px !important;
+  position: absolute;
+}
+
+.card:hover{
+  
+  /* border: 1px solid red !important; */
+  transform: translate(-2px, -2px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  transition: 0.4s;
+
+
+}
+
+
+.facebook-icon {
+    color: blue;
+}
+
+.github-icon {
+    color: gray;
+}
+
+.input-img{
+  border-radius: 10px;
+  border: 5px solid gray;
+  width: 100% !important;
+  height:300px;
+  object-fit: cover;
+  
+}
+span{
+  font-size: 150px;
+  margin-top: -130px !important;
+  margin-bottom: -60px !important;
+}
+.dot{
+  width:100px;
+}
+
+.hi {
+  border: 1px solid black;
+}
+.red {
+  color: rgb(246, 49, 49);
+}
+.yellow {
+  color: rgb(250, 250, 76);
+}
+.green {
+  color: rgb(2, 212, 2);
+}

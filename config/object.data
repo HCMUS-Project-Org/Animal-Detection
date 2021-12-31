@@ -1,0 +1,5 @@
+classes = 8
+train  = /content/Animal-Detection/data/train.txt
+valid  = /content/Animal-Detection/data/val.txt
+names = /content/Animal-Detection/config/object.names
+backup = /content/darknet/backup/

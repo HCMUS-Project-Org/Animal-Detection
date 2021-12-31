@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tag -->
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- import script + style -->
+    <script type='text/javascript' src="./eel.js"> </script>
+    <script type='text/javascript' src="./script.js"> </script>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- import font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+    <!-- import boostrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- import boostrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <title>Machine learning - Group 14</title>
+</head>
+<body>
+    <!-- main area -->
+    <div class="container-lg my-3 mb-lg-5">
+        <div class="row">
+            <div class="card d-flex align-items-center align-items-center justify-content-center border-0 mb-3 shadow rounded-3 col-11 col-lg-9 mx-5 mx-lg-3">
+                <div class='col-1 dot-main w-100'>
+                    <div class="row dot">
+                        <span class='red col-1 ms-4'>.</span>
+                        <span class='yellow col-1' >.</span>
+                        <span class='green col-1'>.</span>
+                    </div>
+                </div>
+
+                <h1 class="card-title fw-bold mt-3 mb-0"> YOLO - Aminal detection </h1>
+            
+                <div class="card-body d-flex flex-column justify-content-center align-items-center w-100">
+                    <div class="row w-100">
+                        <div class='text-center'>
+                            <img id="img_frame" class="input-img mb-3" ></img>
+                        </div>
+                        
+                        <h3 id='detect' class="card-title fw-bold mt-2 mt-lg-4 text-center" > </h3>    
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class='card shadow col-11 col-lg-2 mb-3 mx-5 mx-lg-0'>
+                <div class='col-1 mb-4'>
+                    <div class="row dot">
+                        <span class='red col-1 ms-4 ms-lg-2'>.</span>
+                        <span class='yellow col-1' >.</span>
+                        <span class='green col-1'>.</span>
+                    </div>
+                </div>
+                <div class="row mx-4 mx-lg-2">
+                    <button id = "custom-btn" class="col col-lg-12 me-3 mb-3 btn btn-primary btn-sm"> Upload new photo </button> 
+
+                    <input class = "col col-lg-12 me-3 mb-3 btn btn-input-img" type="file" id="img" name="input-img"  accept="image/*" onChange="uploadImg(this)">
+
+                    <button type = "button" class="col col-lg-12 mb-3 btn btn-outline-danger buttons btn-sm " onClick = "deleteImg()">Remove</button>
+                </div>
+                            
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="w-100 py-4">
+        <div class="container">
+            <div class="row">
+                <!-- group member -->
+                <div class="row">
+                    <h1 class="fw-bold">GROUP MEMBER</h1>
+
+                    <div class = "col-md mb-4">
+                        <div class="d-flex flex-md-column align-items-center">
+                            <img class="shadow mb-2"src="./picture/avt_ToGiaHao.png" alt="pic"/>
+                            <div>
+                                <div class="ps-4">
+                                    <h4 class="fw-bold">ROLE: Collect dataset - Write report</h4>
+                                    <p class="mb-0">Name: Tô Gia Hảo</p>
+                                    <p class="mb-1">Student ID: 19127392</p>
+                                </div>
+                                <div class="d-flex justify-content-start ms-4 ms-lg-0 justify-content-md-center">
+                                    <a class="me-2 icon" href="https://www.facebook.com/lieu.bac.9083">
+                                        <i class="facebook-icon fab fa-facebook-square fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "col-md mb-4">
+                        <div class="d-flex flex-md-column align-items-center">
+                            <img class="shadow mb-2"src="./picture/avt_NguyenThanhQuan.jpg" alt="pic"/>
+                            <div>
+                                <div class="ps-4">
+                                    <h4 class="fw-bold">ROLE: Design Web - Code</h4>
+                                    <p class="mb-0">Name: Nguyễn Thanh Quân</p>
+                                    <p class="mb-1">Student ID: 19127525</p>
+                                </div>
+                                <div class="d-flex justify-content-start ms-4 ms-lg-0 justify-content-md-center">
+                                    <a class="me-2" href="https://www.facebook.com/QuanBlueee/">
+                                        <i class="icon facebook-icon fab fa-facebook-square fa-2x"></i>
+                                    </a>
+                                    <a href="https://github.com/QuanBlue">
+                                        <i class="icon github-icon fab fa-github-square fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "col-md mb-4">
+                        <div class="d-flex flex-md-column align-items-center">
+                            <img class="shadow mb-2"src="./picture/avt_LamChiVan.jpg" alt="pic"/>
+                            <div>
+                                <div class="ps-4">
+                                    <h4 class="fw-bold">ROLE: Code</h4>
+                                    <p class="mb-0">Name: Lâm Chí Văn</p>
+                                    <p class="mb-1">Student ID: 19127625</p>
+                                </div>
+                                <div class="d-flex justify-content-start ms-4 ms-lg-0 justify-content-md-center">
+                                    <a class="me-2" href="https://www.facebook.com/CVanz128">
+                                        <i class="icon facebook-icon fab fa-facebook-square fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- information -->
+                <div>
+                    <h1 class="fw-bold">INFORMATION</h1>
+                    <p class="mb-0"><b>Subject:</b> Introduce to Macine learning</p>
+                    <p class="mb-0"><b>Class:</b> 19MMT</p>
+                    <p class="mb-0"><b>Teacher:</b></p>
+                    <ul class="mb-0">
+                        <li>Ngô Minh Nhật</li>
+                        <li>Lê Long Quốc</li>
+                        <li>Phan Thị Phương Uyên</li>
+                    </ul>
+
+                    <p class="mb-2"><b>University:</b>
+                        <a href="https://www.hcmus.edu.vn/">Ho Chi Minh University of Science</a>
+                    </p>
+                    <p class="small text-muted mb-0">&copy; 2022 Copyright: Ho Chi Minh Uninersity of Science </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
