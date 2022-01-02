@@ -26,6 +26,7 @@ whTarget = 320
 confThreshold = 0.5
 mnsThreshold = 0.3
 color = (0,255,0)
+
 detectedImgPath = 'Static/picture/result.jpg'
 # classFiles = '../config/object.names'
 # colorFiles = '../config/object.colors'
@@ -34,7 +35,10 @@ detectedImgPath = 'Static/picture/result.jpg'
 classFiles = '../config/coco.names'
 modelConfig = '../config/yolov3.cfg'
 modelWeights = '../config/yolov3.weights'
-weights_url = 'https://pjreddie.com/media/files/yolov3.weights'
+
+# weights_url = 'https://pjreddie.com/media/files/yolov3.weights'
+
+
 # -- init Directory containt html --
 eel.init('Static')
 
