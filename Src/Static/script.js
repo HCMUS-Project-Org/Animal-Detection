@@ -11,17 +11,26 @@ function setImgFramSize(width, height) {
     
     width = width * 20;
     height = height * 20;
-    var max_size = 630; 
-    if (width > max_size || height > max_size) {
-        var scale = width / max_size;
+    var max_width = 630; 
+    var max_height = 450;
+    
+    if (width > max_width || height > max_width) {
+        var scale = width / max_width;
+
         console.log('scale:', scale)
 
         height = height / scale;
         width = width / scale;
+
+        if (height > max_height) {
+            scale = height / max_height;
+            height = height / scale;
+            width = width / scale;
+        }
         console.log('adjust width:', width, '- height:', height)
 
-        document.getElementById(img_frame).style.height = height.toString() + 'px';
-        document.getElementById(img_frame).style.width = width.toString() + 'px';
+        document.getElementById(img_frame).style.setProperty("height", height.toString() + 'px', 'important')
+        document.getElementById(img_frame).style.setProperty("width", width.toString() + 'px', 'important')
     }
 }
 
@@ -63,9 +72,8 @@ function uploadImg(obj) {
 
 function deleteImg() {
     document.getElementById(img_frame).src = './picture/white.png';
-    document.getElementById(img_frame).style.height = '300px';
-    document.getElementById(img_frame).style.width = '630px';
- 
+    document.getElementById(img_frame).style.setProperty("height", '450px', 'important')
+    document.getElementById(img_frame).style.setProperty("width", '100%', 'important')
     console.log("Image deleted");
 }
 

@@ -166,4 +166,4 @@ def animalDetection(img_b64):
 
 # -- start Desktop app --
 print('>> Starting application!')
-eel.start('index.html', size=(970, 520))
+eel.start('index.html', size=(1010, 680))
