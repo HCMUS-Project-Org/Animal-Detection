@@ -33,18 +33,14 @@ except:
 whTarget = 320
 confThreshold = 0.5
 mnsThreshold = 0.3
-color = (0,255,0)
+color = (0, 0, 255)
 
 detectedImgPath = 'Static/picture/result.jpg'
-# classFiles = '../config/object.names'
-# colorFiles = '../config/object.colors'
-# modelConfig = '../config/animal.cfg'
-# modelWeights = '../config/animal_last.weights'
-classFiles = '../config/coco.names'
-modelConfig = '../config/yolov3.cfg'
-modelWeights = '../config/yolov3.weights'
+classFiles = '../config/object.names'
+modelConfig = '../config/animal.cfg'
+modelWeights = '../config/animal_best.weights'
 
-weights_url = 'https://pjreddie.com/media/files/yolov3.weights'
+weights_url = 'https://dl.dropboxusercontent.com/s/9qihxeki243heqw/animal_best.weights?dl=0'
 
 
 # -- init Directory containt html --
@@ -135,7 +131,7 @@ def findObject(outputs, img):
         box = boundingBox[i]
         x, y, w, h = box[0], box[1], box[2], box[3] 
         cv2.rectangle(img, (x, y), (x+w, y+h), color, 2)
-        cv2.putText(img,f'{classNames[classIds[i]].upper()} {int(confidences[i]*100)}%', (x + 5, y + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
+        cv2.putText(img,f'{classNames[classIds[i]].upper()} {int(confidences[i]*100)}%', (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
 # export function for js use
 @eel.expose
