@@ -2,8 +2,6 @@
 import os 
 import base64
 
-
-
 try:
     import requests
 except:
@@ -24,7 +22,6 @@ except:
 
 try:
     import eel
-
 except:
     os.system('pip install eel')
     import eel
